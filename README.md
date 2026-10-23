@@ -28,3 +28,30 @@ This course was taught by Edureka, on the Coursera platform.
 - An executable program **must have** a `main()` function.
 - Packages can have an `init()` function that is executed before the `main()` function.
 - It's often used for package-level setup, such as initializing variables or establishing connections.
+
+## Data Types
+
+- Numeric Type: `int`, `float` and `complex`
+- Text Type: `string`
+- Boolean Type: `bool`
+- Composite Type: `array`, `slices`, `maps`, `struct`, `pointer`
+
+### Numeric Types
+
+- `int`: The `int` type represents signed integers. The size of `int` depends onn the architecture and is either 32 or 64 bits.
+- `int8`, `int16`, `int32`, `int64`: These are signed integer types with specific sizes (8, 16, 32 and 64 bits, respectively)
+- `uint`: The `uint` typesd represents unsigned integers. Like `int`, its size varies with the architecture.
+- `uint8`, `uint16`, `uint32`, `uint64`: These are unsigned integer types with specific sizes (8, 16, 32 and 64 bits, respectively)
+- `float32`: Represents 32-bit floating-point numbers.
+- `float64`: Represents 64-bit floating-point numbers (double precision).
+- `complex64`, `complex128`: These types represent complex numbers with 64-bit or 128-bit components, respectively.
+
+### Strings
+
+- Strings in **Go** are immutable. Once created, they can't be modified.
+- We can concatenate strings using the `+` operator.
+
+### Boolean Type
+
+- Represents **only one bit** of information. Either 0 or 1, or `true` or `false`.
+- They're not converted implicitly or explicitly to any other type.
