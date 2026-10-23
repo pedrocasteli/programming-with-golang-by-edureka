@@ -77,3 +77,7 @@ const (
     Blue
 )
 ```
+
+### Goto Statements
+
+It is a control flow statement that allows us to unconditionally jump to a labeled section of your code. However, its use is discouraged in modern programming languages becasue it can lead to complex and hard-to-understand code. In most cases, structered control flow constructs and conditional statements should be preferred over `goto`.
