@@ -55,3 +55,25 @@ This course was taught by Edureka, on the Coursera platform.
 
 - Represents **only one bit** of information. Either 0 or 1, or `true` or `false`.
 - They're not converted implicitly or explicitly to any other type.
+
+### Constants
+
+- They are created using the `const` keyword.
+- A `const` statement can appear anywhere a variable statement can.
+- We can declare them for primitive data types:
+
+```
+const Greeting = "Hello, there"
+const IsReady = true
+```
+
+- The `iota` identifier is used within a `const` declaration to create a sequence of values.
+- It is used to **simplify** definitions of incrementing numbers
+
+```
+const (
+    Red = iota
+    Green
+    Blue
+)
+```
