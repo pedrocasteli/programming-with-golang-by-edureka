@@ -81,3 +81,48 @@ const (
 ### Goto Statements
 
 It is a control flow statement that allows us to unconditionally jump to a labeled section of your code. However, its use is discouraged in modern programming languages becasue it can lead to complex and hard-to-understand code. In most cases, structered control flow constructs and conditional statements should be preferred over `goto`.
+
+### Defer Statements - I
+
+- It's used to schedule a function call to be executed when the surrounding function returns.
+- It's commonly used for tasks such as resource cleanup, closing files, releasing locks, and ensuring that certain operations are performed just before a function returns.
+
+```
+package main
+import (
+    "fmt"
+    "os"
+)
+
+func main() {
+    file, err := os.Open("example.txt")
+
+    if err != nil {
+        fmt.Println("Error: ", err)
+        return
+    }
+
+    defer file.Close()
+}
+```
+
+#### Panic
+
+- The `panic` function is used to trigger a panic or runtime error explicitly.
+- When a `panic` occurs, all defered functions are executed.
+- The program exits with an error message, including the panic value, which can be of any type.
+
+```
+func doSomething() {
+    if someCondition {
+        panic("An error occured")
+    }
+    // Rest of the code
+}
+```
+
+#### Recover
+
+- The `recover` function is used to catch and handle panics.
+- It's only valid, and should only be called in, a `defer` function.
+- When `recover` is called and there is a `panic` in progress, it stops the `panic` and returns the value that was passed to the `panic` function
